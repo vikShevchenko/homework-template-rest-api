@@ -26,11 +26,8 @@ const contactSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'user',
         require: true
-    },
-    token: {
-        type: String,
-        default: ''
     }
+
 }, { versionKey: false });
 
 contactSchema.post("save", handleMongooseError)
